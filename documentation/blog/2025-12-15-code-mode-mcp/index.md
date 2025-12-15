@@ -26,7 +26,7 @@ posts. Since the approach and the benefits are clearly laid out in those posts I
 ### Benefits
 
 * The model can progressively discover relevant tools, without all server and tool definitions in the context window from the beginning
-* The model can chain tool call results into inputs to further tool calls without the intermediate results needing to flow back to the model, costing tokens and exposing data which is potentially sensitive to the model unecessarily
+* The model can chain tool call results into inputs to further tool calls without the intermediate results needing to flow back to the model, costing tokens and exposing data which is potentially sensitive to the model unnecessarily
 * The models pre-training datasets have made them very efficient at analyzing large programmatic APIs and deciding how to usefully call them, as compared to having been trained only on contrived examples of MCP tool calling
 
 ## In goose
@@ -36,14 +36,14 @@ Our implementation generates a JavaScript interface representing the connected M
 against it in [boa](https://github.com/boa-dev/boa) which is an embeddable Javascript engine. One neat feature of boa we were able
 to take advantage of was the concept of [NativeFunction](https://docs.rs/boa_engine/latest/boa_engine/native_function/struct.NativeFunction.html).
 
-In boa, a `NativeFunction` is something which exposes a function in the embeddded JavaScript environment which calls back into a
+In boa, a `NativeFunction` is something which exposes a function in the embedded JavaScript environment which calls back into a
 natively implemented rust function. This is perfect for the calls originating in JS and then routing the tool call to the underlying
 MCP server with ease!
 
 ## Help us evaluate it
 
 Our hope is that by implementing this idea, we improve tool calling performance and handling of large numbers of tools in goose, but
-also provide a open source implementation of this emerging approach. Try out the feature by enabling the "Code Execution" extension
+also provide an open source implementation of this emerging approach. Try out the feature by enabling the "Code Execution" extension
 in v1.17.0 or later of goose, and give us feedback on how it works for you by joining our [discord](https://discord.gg/goose-oss).
 
 Kudos to my colleague [Mic Neale](https://github.com/michaelneale) for collaborating with me on the implementation.
