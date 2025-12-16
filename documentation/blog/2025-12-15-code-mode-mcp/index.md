@@ -14,6 +14,8 @@ presented by Cloudflare in their [Code Mode: the better way to use MCP](https://
 in their [Code execution with MCP: Building more efficient agents](https://www.anthropic.com/engineering/code-execution-with-mcp)
 posts. Since the approach and the benefits are clearly laid out in those posts I will summarize them here.
 
+<!-- truncate -->
+
 ## The approach
 
 ### Summary
